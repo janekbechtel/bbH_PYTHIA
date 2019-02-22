@@ -1,0 +1,6 @@
+<library name="A2tauAnalysis"  file="DummyLHEAnalyzer.cc,nmssm_bba2mu.cc,bbh_mumu.cc,mumuj_mg5.cc,bbh_tautau.cc">
+  <use   name="PhysicsTools/HepMCCandAlgos"/>
+  <use   name="SimDataFormats/GeneratorProducts"/>
+  <use   name="FWCore/Framework"/>
+  <flags   EDM_PLUGIN="1"/>
+</library>

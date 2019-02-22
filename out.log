@@ -1,0 +1,7 @@
+----- Begin Fatal Exception 04-May-2018 11:42:54 CEST-----------------------
+An exception of category 'ConfigFileReadError' occurred while
+   [0] Processing the python configuration file named aMCNLO_MG5_Pythia8_bbh_tautau_cfg.py
+Exception Message:
+python encountered the error: <type 'exceptions.IOError'>
+[Errno 2] No such file or directory: 'aMCNLO_MG5_Pythia8_bbh_tautau_cfg.py'
+----- End Fatal Exception -------------------------------------------------
