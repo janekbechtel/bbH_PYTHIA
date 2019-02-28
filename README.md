@@ -18,5 +18,6 @@ cd GeneratorInterface/LHEInterface/test/
 
 cmsRun POWHEG_Pythia8_bbh_tautau_cfg.py
 
-
+#OR
+#cmsRun aMCNLO_MG5_Pythia8_bbh_tautau_cfg.py
 
