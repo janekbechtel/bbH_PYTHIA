@@ -6,7 +6,7 @@ process = cms.Process("Gen")
 
 process.source = cms.Source("LHESource",
 # mH = 700 GeV, PDF4LHC15_nf4_30, central values for the scales and hdamp
-       fileNames = cms.untracked.vstring('file:/portal/ekpbms1/home/jbechtel/bbH/POWHEG-BOX-V2/bbH/testrun/parallel/pwgevents-0001.lhe')
+       fileNames = cms.untracked.vstring('file:/portal/ekpbms1/home/jbechtel/bbH/POWHEG-BOX-V2/bbH/testrun/parallel/pwgevents-00{}.lhe'.format(sys.argv[2])
                                         )
 	#fileNames = cms.untracked.vstring('file:/portal/ekpbms1/home/jbechtel/bbH/POWHEG-BOX-V2/bbH/testrun/save/pwgevents-0003.lhe')
 )

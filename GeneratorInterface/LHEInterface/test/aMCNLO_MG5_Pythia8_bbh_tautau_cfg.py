@@ -1,6 +1,6 @@
 #!/usr/bin/env cmsRun
 import FWCore.ParameterSet.Config as cms
-
+import sys
 process = cms.Process("Gen")
 
 process.source = cms.Source("LHESource",
@@ -9,7 +9,8 @@ process.source = cms.Source("LHESource",
 # mh=125 GeV, PDF4LHC15_nf4_30, central shower scale divided by sqrt(2)
 #	 fileNames = cms.untracked.vstring('file:/afs/cern.ch/work/a/anikiten/public/MG5_aMC_v2_6_4/bbH_4FS_yb2/Events/run_09/events.lhe')
 # mh=125 GeV, PDF4LHC15_nf4_30, central shower scale multiplied by sqrt(2)
-	 fileNames = cms.untracked.vstring('file:/afs/cern.ch/work/a/anikiten/public/MG5_aMC_v2_6_4/bbH_4FS_yb2/Events/run_10/events.lhe')
+	 #fileNames = cms.untracked.vstring('file:/portal/ekpbms1/home/jbechtel/bbH/MG5/MG5_aMC_v2_6_5/bbH_4FS_yb2/Events/run_01/events.lhe')
+	fileNames = cms.untracked.vstring('file:/portal/ekpbms1/home/jbechtel/bbH/MG5/bbH_4FS_{}/Events/run_06/events.lhe'.format(sys.argv[2]))
 #mH = 300 GeV, PDF4LHC15_nf4_30
 #	  fileNames = cms.untracked.vstring('file:/afs/cern.ch/work/a/anikiten/public/MG5_aMC_v2_3_0_beta/bbH_4FS_yb2/Events/run_04/events.lhe')
 # mH = 500 GeV, PDF4LHC15_nf4_30
@@ -38,7 +39,7 @@ process.source = cms.Source("LHESource",
 
 # process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(5))
 
-process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1000000))
+process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(10))
 
 process.configurationMetadata = cms.untracked.PSet(
 	version = cms.untracked.string('alpha'),
@@ -141,7 +142,7 @@ process.bbh_tautau_analysis = cms.EDAnalyzer("bbh_tautau",
 #  	    HistOutFile = cms.untracked.string('bbh_mumu_125gev_mg5_yb2_highshowerscale.root'),
 #	    HistOutFile = cms.untracked.string('bbh_mumu_125gev_mg5_yb2_showerscale_1_div_sqrt2.root'),
 #	    HistOutFile = cms.untracked.string('bbh_mumu_125gev_mg5_yb2_showerscale_1_div_2.root'),
-	    HistOutFile = cms.untracked.string('bbh_mumu_125gev_mg5_yb2_showerscale_1.root'),
+	    HistOutFile = cms.untracked.string('bbh_mumu_125gev_mg5_{}_showerscale_1-0.root'.format(sys.argv[2])),
 # mH=300 GeV
 # tau tau
 #  	    HistOutFile = cms.untracked.string('bbh_tautau_700gev_mg5_yb2_alphadef025_pdfrwt.root'),
